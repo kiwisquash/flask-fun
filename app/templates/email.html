@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+{% if len(username) > 1 %}
+<h1>Hello {{ username }}</h1>
+{% else %}
+<h1>Hello Stranger!</h1>
+{% endif %}
+
+<!-- <form method="POST"> -->
+    <!-- {{ form.hidden_tag() }}  -->
+    <!-- {{ form.name.label }} {{ form.name() }} <br/> -->
+    <!-- {{ form.cool.label }} {{ form.cool() }} <br/> -->
+    <!-- {{ form.submit() }} -->
+<!-- </form> -->
+
+{% import "bootstrap/wtf.html" as wtf %}
+{{ wtf.quick_form(form) }}
+
+{% endblock %}

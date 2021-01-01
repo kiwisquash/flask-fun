@@ -1,0 +1,7 @@
+__pycache__
+.venv
+.vscode
+*.sqlite
+*.DS_Store
+*.code-workspace
+.idea

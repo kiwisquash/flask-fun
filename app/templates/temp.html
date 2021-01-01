@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+<form method="POST">
+    {{ form1.hidden_tag() }} 
+    {{ form1.celcius.label }} {{ form1.celcius(value=celcius) }} <br/>
+    "good"
+    {{ form1.submit() }}
+</form>
+
+<form method="POST">
+    {{ form2.hidden_tag() }} 
+    {{ form2.bad.label }} {{ form2.bad(value=bad) }} <br/>
+    "bad"
+    {{ form2.submit() }}
+</form>
+
+
+{% endblock %}
