@@ -7,7 +7,7 @@ db_dev_uri = os.path.join(base_dir, "data-dev.sqlite")
 
 
 class Configuration:
-    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = os.environ.get("SECRET_KEY") or "a_secret_key"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = os.environ.get("MAIL_SERVER", "smtp.googlemail.com")
     MAIL_PORT = int(os.environ.get("MAIL_PORT", 587))
